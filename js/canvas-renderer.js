@@ -14,12 +14,7 @@
 }( this, function factory() {
 
 let fov = window && window.fov;
-if (fov) {
-  function scale(z) {return fov/(fov+z)};
-} else {
-  function scale(z) {return 1};
-}
-
+function scale(z) {return fov ? fov/(fov+z) : 1 };
 
 var CanvasRenderer = { isCanvas: true };
 
